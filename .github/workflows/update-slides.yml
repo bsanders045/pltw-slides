@@ -1,32 +1,16 @@
-name: Refresh Presentation Images
+- name: Set up Python Environment
+    uses: actions/setup-python@v6 # Updated to v6 for Node 24 support
+    with:
+      python-version: '3.11' # Corrected typo from python-python-version
 
-on:
-  schedule:
-    - cron: '0 0 1 * *'
-  workflow_dispatch:
+  - name: Run Slide Rotator Script
+    run: python rotate_images.py
 
-permissions:
-  contents: write
-
-jobs:
-  update-slides:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out Repository Content
-        uses: actions/checkout@v4
-
-      - name: Set up Python Environment
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
-      - name: Run Slide Rotator Script
-        run: python rotate_images.py
-
-      - name: Commit and Push Image Changes
-        run: |
-          git config --global user.name "Engineering-Bot"
-          git config --global user.email "engineering-bot@users.noreply.github.com"
-          git add pltw_civil_architecture.html
-          git diff-index --quiet HEAD || git commit -m "Automated Slide Refreshes [skip ci]"
-          git push
+  - name: Commit and Push Image Changes
+    run: |
+      git config --global user.name "Engineering-Bot"
+      git config --global user.email "engineering-bot@users.noreply.github.com"
+      git add pltw_civil_architecture.html
+      # Commit only if the code actually modified image URLs
+      git diff-index --quiet HEAD || git commit -m "Automated Slide Refreshes: Fresh 4-Week Cycle Images [skip ci]"
+      git push
