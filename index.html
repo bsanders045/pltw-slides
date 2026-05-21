@@ -133,6 +133,14 @@
             if (e.key === 'ArrowRight' && currentIdx < totalSlides - 1) goToSlide(currentIdx + 1);
             if (e.key === 'ArrowLeft' && currentIdx > 0) goToSlide(currentIdx - 1);
         });
+       // Automatically advance slides every 5 seconds
+setInterval(() => {
+    if (currentIdx < totalSlides - 1) {
+        goToSlide(currentIdx + 1);
+    } else {
+        goToSlide(0); // Loop back to the first slide
+    }
+}, 5000); // 5000 milliseconds = 5 seconds 
     </script>
 </body>
 </html>
