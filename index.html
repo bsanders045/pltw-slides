@@ -1,10 +1,138 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <!-- This automatically redirects visitors to your slides instantly -->
-    <meta http-equiv="refresh" content="0; url=pltw_civil_architecture.html">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLTW Civil Engineering & Architecture</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #0f172a; color: #f8fafc; overflow: hidden; }
+        .slider-container { display: flex; width: 800vw; height: 100vh; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
+        .slide { width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center; padding: 40px; flex-shrink: 0; }
+        .card { display: flex; width: 90%; max-width: 1200px; height: 80vh; background: #1e293b; border-radius: 16px; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); border: 1px solid #334155; }
+        .content { flex: 1; padding: 60px; display: flex; flex-direction: column; justify-content: center; }
+        .image-container { flex: 1; background-size: cover; background-position: center; position: relative; }
+        h1 { font-size: 2.5rem; color: #ff7a00; margin-bottom: 20px; line-height: 1.2; }
+        p { font-size: 1.2rem; color: #cbd5e1; line-height: 1.6; }
+        .nav-dots { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); display: flex; gap: 12px; z-index: 10; }
+        .dot { width: 12px; height: 12px; border-radius: 50%; background: #475569; cursor: pointer; transition: background 0.3s; }
+        .dot.active { background: #ff7a00; transform: scale(1.2); }
+        .controls { position: absolute; bottom: 30px; right: 40px; display: flex; gap: 20px; z-index: 10; font-size: 0.9rem; color: #94a3b8; }
+    </style>
 </head>
 <body>
-    <p>Loading presentation... <a href="pltw_civil_architecture.html">Click here if you are not redirected</a>.</p>
+
+    <div class="slider-container" id="slider">
+        <div class="slide">
+            <div class="card">
+                <div class="content">
+                    <h1>Art Deco Heights</h1>
+                    <p>Emerging in the 1920s, Art Deco combined luxurious design with modern industrial technology. It features bold geometric shapes, clean vertical lines, and striking decorative patterns that celebrate modern progress.</p>
+                </div>
+                <div class="image-container" id="img-0" style="background-image: url('https://images.unsplash.com/photo-1582650625119-3a31f8fa2699?w=800&auto=format&fit=crop');"></div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card">
+                <div class="content">
+                    <h1>Frank Lloyd Wright & Organic Architecture</h1>
+                    <p>Organic architecture promotes harmony between human habitation and the natural world. Frank Lloyd Wright pioneered this style, designing structures that seem to grow seamlessly directly out of the landscape.</p>
+                </div>
+                <div class="image-container" id="img-1" style="background-image: url('https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800&auto=format&fit=crop');"></div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card">
+                <div class="content">
+                    <h1>Gothic Engineering Marvels</h1>
+                    <p>Characterized by pointed arches, ribbed vaults, and flying buttresses, Gothic architecture allowed historic builders to reach breathtaking new heights while flooding massive stone cathedrals with pure light.</p>
+                </div>
+                <div class="image-container" id="img-2" style="background-image: url('https://images.unsplash.com/photo-1478147427282-58a87a120781?w=800&auto=format&fit=crop');"></div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card">
+                <div class="content">
+                    <h1>Modernist Structural Form</h1>
+                    <p>Emphasizing the core philosophy that 'form follows function', Modernism stripped away unnecessary ornamentation to showcase analytical design, exposed steel structures, and expansive industrial glass panels.</p>
+                </div>
+                <div class="image-container" id="img-3" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&auto=format&fit=crop');"></div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card">
+                <div class="content">
+                    <h1>The Golden Gate Bridge</h1>
+                    <p>A true triumph of civil engineering, this iconic suspension bridge spans a treacherous mile-wide strait. It utilizes massive steel cables engineered to withstand intense ocean winds and seismic activity.</p>
+                </div>
+                <div class="image-container" id="img-4" style="background-image: url('https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?w=800&auto=format&fit=crop');"></div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card">
+                <div class="content">
+                    <h1>The Mighty Hoover Dam</h1>
+                    <p>A massive concrete gravity-arch dam built to control floods, provide irrigation, and generate clean hydroelectric power. It stands as a monument to heavy civil infrastructure and resource management.</p>
+                </div>
+                <div class="image-container" id="img-5" style="background-image: url('https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?w=800&auto=format&fit=crop');"></div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card">
+                <div class="content">
+                    <h1>The Millau Viaduct</h1>
+                    <p>An engineering masterpiece, this cable-stayed bridge spans the gorge valley of southern France. It ranks as the tallest bridge structure in the world, combining structural optimization with stunning visual aesthetics.</p>
+                </div>
+                <div class="image-container" id="img-6" style="background-image: url('https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?w=800&auto=format&fit=crop');"></div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="card">
+                <div class="content">
+                    <h1>The Burj Khalifa</h1>
+                    <p>Reaching high into the clouds, the world's tallest building utilizes a revolutionary buttressed core structural system. It represents the absolute pinnacle of high-rise structural engineering and architectural vision.</p>
+                </div>
+                <div class="image-container" id="img-7" style="background-image: url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800&auto=format&fit=crop');"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="nav-dots" id="dotsContainer"></div>
+    <div class="controls">Use ← and → Arrow Keys to Navigate</div>
+
+    <script>
+        const slider = document.getElementById('slider');
+        const dotsContainer = document.getElementById('dotsContainer');
+        const totalSlides = 8;
+        let currentIdx = 0;
+
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement('div');
+            dot.classList.add('dot');
+            if (i === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(i));
+            dotsContainer.appendChild(dot);
+        }
+
+        const dots = document.querySelectorAll('.dot');
+
+        function goToSlide(idx) {
+            currentIdx = idx;
+            slider.style.transform = `translateX(-${currentIdx * 100}vw)`;
+            dots.forEach((d, i) => d.classList.toggle('active', i === currentIdx));
+        }
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' && currentIdx < totalSlides - 1) goToSlide(currentIdx + 1);
+            if (e.key === 'ArrowLeft' && currentIdx > 0) goToSlide(currentIdx - 1);
+        });
+    </script>
 </body>
 </html>
