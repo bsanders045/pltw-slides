@@ -25,7 +25,7 @@ def get_unsplash_image(query, seed):
         return None
 
 def main():
-    html_filename = "pltw_civil_architecture.html"
+    html_filename = "index.html"
     epoch_start = datetime(2026, 1, 1)
     days_since_epoch = (datetime.now() - epoch_start).days
     four_week_period = days_since_epoch // 28
