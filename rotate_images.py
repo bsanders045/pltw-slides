@@ -4,14 +4,14 @@ import urllib.parse
 from datetime import datetime
 
 SLIDE_KEYWORDS = {
-    "img-0": "empire-state-building-art-deco",
-    "img-1": "fallingwater-frank-lloyd-wright",
-    "img-2": "gothic-cathedral-architecture",
-    "img-3": "modernist-glass-house-architecture",
-    "img-4": "golden-gate-bridge-suspension",
-    "img-5": "hoover-dam-concrete",
-    "img-6": "millau-viaduct-bridge",
-    "img-7": "burj-khalifa-skyscraper"
+    "img-0": "art-deco-architecture-building&q=artdeco",
+    "img-1": "fallingwater-frank-lloyd-wright&q=waterfall",
+    "img-2": "gothic-cathedral-architecture&q=gothic",
+    "img-3": "modernist-glass-house-architecture&q=modernism",
+    "img-4": "golden-gate-bridge-suspension&q=bridge",
+    "img-5": "hoover-dam-concrete&q=dam",
+    "img-6": "millau-viaduct-bridge&q=viaduct",
+    "img-7": "burj-khalifa-skyscraper&q=skyscraper"
 }
 
 def get_unsplash_image(query, seed):
